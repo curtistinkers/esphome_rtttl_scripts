@@ -1,0 +1,83 @@
+scripts
+  - id: play_beep
+    then:
+      - rtttl.play: Beep:d=4,o=5,b=120:a5
+  - id: play_mario
+    then:
+      - rtttl.play: Mario:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g,8p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,16p,8c6,16p,8g,16p,8e,16p,8a,8b,16a#,8a,16g.,16e6,16g6,8a6,16f6,8g6,8e6,16c6,16d6,8b,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16c7,16p,16c7,16c7,p,16g6,16f#6,16f6,16d#6,16p,16e6,16p,16g#,16a,16c6,16p,16a,16c6,16d6,8p,16d#6,8p,16d6,8p,16c6
+  - id: play_two_short
+    then:
+      - rtttl.play: Two_Short:d=4,o=5,b=100:16e6,16e6
+  - id: play_long
+    then:
+      - rtttl.play: Long:d=1,o=5,b=100:e6
+  - id: play_siren
+    then:
+      - rtttl.play: Siren:d=8,o=5,b=100:d,e,d,e,d,e,d,e
+  - id: play_scale_up
+    then:
+      - rtttl.play: Scale_Up:d=32,o=5,b=100:c,c#,d#,e,f#,g#,a#,b
+  - id: play_star_wars
+    then:
+      - rtttl.play: Star_Wars:d=16,o=5,b=100:4e,4e,4e,8c,p,g,4e,8c,p,g,4e,4p,4b,4b,4b,8c6,p,g,4d#,8c,p,g,4e,8p
+  - id: play_mission_impossible
+    then:
+      - rtttl.play: Mission_Impossible:d=16,o=6,b=95:32d,32d#,32d,32d#,32d,32d#,32d,32d#,32d,32d,32d#,32e,32f,32f#,32g,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,a#,g,2d,32p,a#,g,2c#,32p,a#,g,2c,a#5,8c,2p,32p,a#5,g5,2f#,32p,a#5,g5,2f,32p,a#5,g5,2e,d#,8d
+
+button:
+  - platform: template
+    name: "Test Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_beep
+  - platform: template
+    name: "Test Mario Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_mario
+  - platform: template
+    name: "Test Two Short Beeps"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_two_short
+  - platform: template
+    name: "Test Long Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_long
+  - platform: template
+    name: "Test Siren Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_siren
+  - platform: template
+    name: "Test Scale Up Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_scale_up
+  - platform: template
+    name: "Test Star Wars Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_star_wars
+  - platform: template
+    name: "Test Mission Impossible Beep"
+    icon: "mdi:volume-high"
+    entity_category: diagnostic
+    disabled_by_default: true
+    on_press:
+      - script.execute: play_mission_impossible
