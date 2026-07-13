@@ -1,4 +1,4 @@
-scripts
+scripts:
   - id: play_beep
     then:
       - rtttl.play: Beep:d=4,o=5,b=120:a5
