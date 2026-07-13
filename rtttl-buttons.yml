@@ -1,5 +1,5 @@
 packages:
-  rtttl-scripts: rtttl-scripts.yml
+  rtttl-scripts: !include rtttl-scripts.yml
 
 button:
   - platform: template
